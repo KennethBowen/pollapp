@@ -9,4 +9,8 @@
 
 %ul
   -@poll.questions.each do |questions|
-    %li=questions.title
+    %li
+      =questions.title
+      %ul
+        -question.possible_answers.each do |possible_answer|
+          %li=possible_answer.title
